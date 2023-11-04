@@ -10,18 +10,11 @@ namespace SaturdayPersonTask.Models
     {
         public decimal Salary { get; set; }
         public string Position { get; set; }
-        public enum GenderEnum
-        {
-            Male = 'm',
-            Female = 'f',
-            Other = 'o'
-        }
-
-        public GenderEnum Gender { get; set; }
+        public Gender Gender { get; set; }
 
         public override string ToString()
         {
-            return $"{Id}. Fullname: {Fullname()}, Gender:{Gender}, Age:{Age}, Salary:{Salary}, Position: {Position}";
+            return $"{Id}. Fullname: {Fullname()}, Gender: {Gender}, Age: {Age}, Salary: {Salary}, Position: {Position}";
         }
 
         public Employee()
@@ -29,5 +22,12 @@ namespace SaturdayPersonTask.Models
             _id++;
             Id = _id;
         }
+    }
+
+    public enum Gender
+    {
+        Male = 1,
+        Female,
+        Other
     }
 }

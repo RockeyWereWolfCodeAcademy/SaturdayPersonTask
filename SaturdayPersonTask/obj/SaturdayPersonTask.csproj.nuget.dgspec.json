@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\SaturdayPersonTask.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\SaturdayPersonTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\SaturdayPersonTask.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\SaturdayPersonTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
         "projectName": "SaturdayPersonTask",
-        "projectPath": "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
-        "packagesPath": "C:\\Users\\Birinci Novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\obj\\",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Birinci Novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,4 +1,5 @@
 ﻿using SaturdayPersonTask.Models;
+using System;
 
 namespace SaturdayPersonTask
 {
@@ -34,35 +35,6 @@ namespace SaturdayPersonTask
                         case 4:
                             Console.WriteLine("Enter id to update:");
                             uint idToUpdate = Convert.ToUInt32(Console.ReadLine());
-                            //var updatedEmployee = company.GetEmployeeById(idToUpdate);
-                            //Console.WriteLine("What you want to update?\n1.Name\n2.Gender\n3.Salary\n4.Position");
-                            //int optionForUpdate = Convert.ToInt32(Console.ReadLine());
-                            //switch (optionForUpdate)
-                            //{
-                            //    case 1:
-                            //        Console.WriteLine("Enter new name:");
-                            //        string newName = Console.ReadLine();
-                            //        var newNameEmployee = company.GetEmployeeById(idToUpdate)
-                            //        company.UpdateEmployee(updatedEmployee);
-                            //        break;
-                            //    case 2:
-                            //        Console.WriteLine("Enter new gender(m/f/o): ");
-                            //        string gender = Console.ReadLine();
-                            //        var updatedEmployee = company.GetEmployeeById(idToUpdate);
-                            //        updatedEmployee.Name = newName;
-                            //        break;
-                            //    case 3:
-                            //        Console.WriteLine("Enter new salary:");
-                            //        decimal newSalary = Convert.ToDecimal(Console.ReadLine());
-                            //        break;
-                            //    case 4:
-                            //        Console.WriteLine("Enter new position:");
-                            //        string newPosition = Console.ReadLine();
-                            //        break;
-                            //    default:
-                            //        Console.WriteLine("There is no such option!");
-                            //        break;
-                            //}
                             company.UpdateEmployee(company.GetEmployeeById(idToUpdate));
                             break;
                         case 5:
@@ -99,37 +71,13 @@ namespace SaturdayPersonTask
             employee.Position = Console.ReadLine();
             Console.Write("Enter salary: ");
             employee.Salary = Convert.ToDecimal(Console.ReadLine());
-            Console.Write("Select gender(m/f/o): ");
-            string gender = Console.ReadLine();
-            employee.Gender = (Employee.GenderEnum)gender[0];
+            Console.WriteLine("Select gender: ");
+            Console.WriteLine("1.Male\n2.Female\n3.Other");
+            int input = Convert.ToInt32(Console.ReadLine());
+            if (!Enum.IsDefined(typeof(Gender), input))
+                throw new ArgumentOutOfRangeException();
+            employee.Gender = (Gender)input;
             return employee;
         }
-
-        //static Employee CreateEmployeeForUpdate()
-        //{
-        //    Console.WriteLine("What you want to update?\n1.Name\n2.Gender\n3.Salary\n4.Position");
-        //    int option = Convert.ToInt32(Console.ReadLine());
-        //    switch (option)
-        //    {
-        //        case 1:
-        //            Console.WriteLine("Enter new name:");
-        //            employee.Name = Console.ReadLine();
-        //            break;
-        //        case 2:
-        //            Console.WriteLine("");
-        //            break;
-        //        case 3:
-        //            Console.WriteLine("Enter new salary:");
-        //            employee.Salary = Convert.ToDecimal(Console.ReadLine());
-        //            break;
-        //        case 4:
-        //            Console.WriteLine("Enter new position:");
-        //            employee.Position = Console.ReadLine();
-        //            break;
-        //        default:
-        //            Console.WriteLine("There is no such option!");
-        //            break;
-        //    }
-        //}
     }
 }

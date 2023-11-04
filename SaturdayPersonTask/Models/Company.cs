@@ -30,6 +30,7 @@ namespace SaturdayPersonTask.Models
 
         public void UpdateEmployee(Employee employee)
         {
+
             Console.WriteLine("What you want to update?\n1.Name\n2.Gender\n3.Salary\n4.Position");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -39,7 +40,12 @@ namespace SaturdayPersonTask.Models
                     employee.Name = Console.ReadLine();
                     break;
                 case 2:
-                    Console.WriteLine("");
+                    Console.WriteLine("Select gender: ");
+                    Console.WriteLine("1.Male\n2.Female\n3.Other");
+                    int input = Convert.ToInt32(Console.ReadLine());
+                    if (!Enum.IsDefined(typeof(Gender), input))
+                        throw new ArgumentOutOfRangeException();
+                    employee.Gender = (Gender)input;
                     break;
                 case 3:
                     Console.WriteLine("Enter new salary:");
