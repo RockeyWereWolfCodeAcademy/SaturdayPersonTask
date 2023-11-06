@@ -26,3 +26,17 @@ C:\Users\User\Source\Repos\Task\SaturdayPersonTask\bin\Debug\net6.0\SaturdayPers
 C:\Users\User\Source\Repos\Task\SaturdayPersonTask\bin\Debug\net6.0\SaturdayPersonTask.pdb
 C:\Users\User\Source\Repos\Task\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.genruntimeconfig.cache
 C:\Users\User\Source\Repos\Task\SaturdayPersonTask\obj\Debug\net6.0\ref\SaturdayPersonTask.dll
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.AssemblyInfoInputs.cache
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.AssemblyInfo.cs
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.csproj.CoreCompileInputs.cache
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.dll
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\refint\SaturdayPersonTask.dll
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.pdb
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\bin\Debug\net6.0\SaturdayPersonTask.exe
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\bin\Debug\net6.0\SaturdayPersonTask.deps.json
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\bin\Debug\net6.0\SaturdayPersonTask.runtimeconfig.json
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\bin\Debug\net6.0\SaturdayPersonTask.dll
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\bin\Debug\net6.0\SaturdayPersonTask.pdb
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\SaturdayPersonTask.genruntimeconfig.cache
+C:\Users\Birinci Novbe\Source\Repos\SaturdayPersonTask\SaturdayPersonTask\obj\Debug\net6.0\ref\SaturdayPersonTask.dll

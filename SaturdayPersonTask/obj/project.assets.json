@@ -8,23 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Birinci Novbe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
+      "projectUniqueName": "C:\\Users\\Birinci Novbe\\Source\\Repos\\SaturdayPersonTask\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
       "projectName": "SaturdayPersonTask",
-      "projectPath": "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Source\\Repos\\Task\\SaturdayPersonTask\\obj\\",
+      "projectPath": "C:\\Users\\Birinci Novbe\\Source\\Repos\\SaturdayPersonTask\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
+      "packagesPath": "C:\\Users\\Birinci Novbe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Birinci Novbe\\Source\\Repos\\SaturdayPersonTask\\SaturdayPersonTask\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Birinci Novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

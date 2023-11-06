@@ -1,4 +1,6 @@
-﻿using SaturdayPersonTask.Models;
+﻿using SaturdayPersonTask.Enums;
+using SaturdayPersonTask.Exceptions;
+using SaturdayPersonTask.Models;
 using System;
 
 namespace SaturdayPersonTask
@@ -27,10 +29,11 @@ namespace SaturdayPersonTask
                             Console.WriteLine(company.GetEmployeeById(idToGet));
                             break;
                         case 3:
-                            foreach (Employee emp in company.GetEmployees())
-                            {
-                                Console.WriteLine(emp);
-                            }
+                            company.GetEmployees().ForEach(employee =>  Console.WriteLine(employee));
+                            //foreach (Employee emp in company.GetEmployees())
+                            //{
+                            //    Console.WriteLine(emp);
+                            //}
                             break;
                         case 4:
                             Console.WriteLine("Enter id to update:");
@@ -40,7 +43,7 @@ namespace SaturdayPersonTask
                         case 5:
                             Console.WriteLine("Enter id to remove:");
                             uint idToRemove = Convert.ToUInt32(Console.ReadLine());
-                            company.RemoveEmployee(company.GetEmployeeById(idToRemove));
+                            company.RemoveEmployee(idToRemove);
                             break;
                         case 0:
                             Console.WriteLine("Exiting...");
@@ -60,24 +63,33 @@ namespace SaturdayPersonTask
         }
         static Employee CreateEmployee()
         {
-            Employee employee = new Employee();
             Console.Write("Enter name of employee: ");
-            employee.Name = Console.ReadLine();
+            string name = Console.ReadLine();
             Console.Write("Enter surname: ");
-            employee.Surname = Console.ReadLine();
+            string surname = Console.ReadLine();
             Console.Write("Enter age: ");
-            employee.Age = Convert.ToByte(Console.ReadLine());
-            Console.Write("Enter position: ");
-            employee.Position = Console.ReadLine();
+            byte age = Convert.ToByte(Console.ReadLine());
+            Console.WriteLine("Select position:");
+            Console.WriteLine("1. President\n2.Vice-President\n3.Marketing Manager\n4.Chief\n5.Staff");
+            int position = Convert.ToInt32(Console.ReadLine());
+            if (!Enum.IsDefined(typeof(GenderEnum), position))
+                throw new PositionNotFoundException("There is no such option");
             Console.Write("Enter salary: ");
-            employee.Salary = Convert.ToDecimal(Console.ReadLine());
+            decimal salary = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("Select gender: ");
             Console.WriteLine("1.Male\n2.Female\n3.Other");
-            int input = Convert.ToInt32(Console.ReadLine());
-            if (!Enum.IsDefined(typeof(Gender), input))
-                throw new ArgumentOutOfRangeException();
-            employee.Gender = (Gender)input;
-            return employee;
+            int gender = Convert.ToInt32(Console.ReadLine());
+            if (!Enum.IsDefined(typeof(GenderEnum), gender))
+                throw new GenderNotFoundException("There is no such option");
+            return new Employee()
+            {
+                Name = name,
+                Surname = surname,
+                Age = age,
+                Position = (PositionEnum)position,
+                Salary = salary,
+                Gender = (GenderEnum)gender
+            };
         }
     }
 }
