@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Birinci Novbe\\Source\\Repos\\SaturdayPersonTask\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
+      "projectUniqueName": "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
       "projectName": "SaturdayPersonTask",
-      "projectPath": "C:\\Users\\Birinci Novbe\\Source\\Repos\\SaturdayPersonTask\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
+      "projectPath": "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\SaturdayPersonTask\\SaturdayPersonTask.csproj",
       "packagesPath": "C:\\Users\\Birinci Novbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Birinci Novbe\\Source\\Repos\\SaturdayPersonTask\\SaturdayPersonTask\\obj\\",
+      "outputPath": "C:\\Users\\Birinci Novbe\\Desktop\\SaturdayPersonTask\\SaturdayPersonTask\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Birinci Novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",

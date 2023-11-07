@@ -2,6 +2,7 @@
 using SaturdayPersonTask.Exceptions;
 using SaturdayPersonTask.Models;
 using System;
+using System.Threading.Channels;
 
 namespace SaturdayPersonTask
 {
@@ -9,27 +10,26 @@ namespace SaturdayPersonTask
     {
         static void Main(string[] args)
         {
-            Company company = new Company();
             int option = -1;
             while (option != 0) 
             {
                 Console.WriteLine("Choose from options: \n1. Create an employee\n2. Get employee details by id\n3. Get all employees" +
-                "\n4. Update employee details by id\n5. Delete employee records by id\n0. Exit program");
+                "\n4. Update employee details by id\n5. Delete employee records by id\n6. Get employees by string value\n7. Get employees created in last week\n0. Exit program");
                 option = Convert.ToInt32(Console.ReadLine());
                 try
                 {
                     switch (option)
                     {
                         case 1:
-                            company.AddEmployee(CreateEmployee());
+                            EmployeeService.AddEmployee(CreateEmployee());
                             break;
                         case 2:
                             Console.WriteLine("Enter id to get:");
                             uint idToGet = Convert.ToUInt32(Console.ReadLine());
-                            Console.WriteLine(company.GetEmployeeById(idToGet));
+                            Console.WriteLine(EmployeeService.GetEmployeeById(idToGet));
                             break;
                         case 3:
-                            company.GetEmployees().ForEach(employee =>  Console.WriteLine(employee));
+                            EmployeeService.GetEmployees().ForEach(employee =>  Console.WriteLine(employee));
                             //foreach (Employee emp in company.GetEmployees())
                             //{
                             //    Console.WriteLine(emp);
@@ -38,12 +38,20 @@ namespace SaturdayPersonTask
                         case 4:
                             Console.WriteLine("Enter id to update:");
                             uint idToUpdate = Convert.ToUInt32(Console.ReadLine());
-                            company.UpdateEmployee(company.GetEmployeeById(idToUpdate));
+                            EmployeeService.UpdateEmployee(EmployeeService.GetEmployeeById(idToUpdate));
                             break;
                         case 5:
                             Console.WriteLine("Enter id to remove:");
                             uint idToRemove = Convert.ToUInt32(Console.ReadLine());
-                            company.RemoveEmployee(idToRemove);
+                            EmployeeService.RemoveEmployee(idToRemove);
+                            break;
+                        case 6:
+                            Console.WriteLine("Enter keyword to search: ");
+                            EmployeeService.GetEmployeesByValue(Console.ReadLine()).ForEach(employee => Console.WriteLine(employee));
+                            break;
+                        case 7:
+                            Console.WriteLine("Latest employees:");
+                            EmployeeService.GetLatestEmployees().ForEach(employee => Console.WriteLine(employee));
                             break;
                         case 0:
                             Console.WriteLine("Exiting...");
@@ -81,6 +89,8 @@ namespace SaturdayPersonTask
             int gender = Convert.ToInt32(Console.ReadLine());
             if (!Enum.IsDefined(typeof(GenderEnum), gender))
                 throw new GenderNotFoundException("There is no such option");
+            Console.Write("When employee was created?(dd/mm/yyyy): ");
+            var creationDate = DateTime.Parse(Console.ReadLine());
             return new Employee()
             {
                 Name = name,
@@ -88,7 +98,8 @@ namespace SaturdayPersonTask
                 Age = age,
                 Position = (PositionEnum)position,
                 Salary = salary,
-                Gender = (GenderEnum)gender
+                Gender = (GenderEnum)gender,
+                CreatedAt = creationDate
             };
         }
     }

@@ -8,7 +8,7 @@ namespace SaturdayPersonTask.Models
 {
     internal static class CompanyDatabase
     {
-        static List<Company> Companies { get; set; }
-        static List<Employee> Employees { get; set; }
+        public static List<Company> Companies { get; set; } = new List<Company>();
+        public static List<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

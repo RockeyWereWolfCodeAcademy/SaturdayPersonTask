@@ -10,6 +10,7 @@ namespace SaturdayPersonTask.Models
 {
     internal class Employee : Person
     {
+        public DateTime CreatedAt { get; set; }
         public decimal Salary { get; set; }
         PositionEnum _position;
         public PositionEnum Position { get => _position;
